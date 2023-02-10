@@ -1,0 +1,48 @@
+.container {
+  max-width: 70rem;
+  padding: 3em 1.5em;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  // grid-template-columns: 1fr;
+  gap: 1.5rem;
+  grid-template-areas: 
+  "first"
+  "second"
+  "third"
+  "fourth"
+  "fifth";
+  grid-auto-columns: 1fr;
+
+  
+
+  @media (min-width: 30em) {
+    max-width: 30rem;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 32em) {
+    max-width: none;
+    // grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    "first first"
+    "second fifth"
+    "third fifth"
+    "fourth fourth";
+  }
+
+  @media (min-width: 56.25em) {
+    max-width: none;
+    // grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    "first first second fifth"
+    "third fourth fourth fifth";
+  }
+}
+

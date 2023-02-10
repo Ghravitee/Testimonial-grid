@@ -1,0 +1,125 @@
+.first, .second {
+   &__heading {
+      color: var(--White);
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+      font-weight: 600;
+   }
+
+   &__paragraph {
+      font-size: .78rem;
+      color: var(--Light-Gray);
+      opacity: .7;
+   }
+}
+
+.third, .fifth {
+   &__heading {
+      color: var( --Very-Dark-Grayish-Blue);
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+      font-weight: 600;
+
+   }
+
+   &__paragraph {
+      font-size: .78rem;
+      color: var(--Very-Dark-Grayish-Blue);
+      opacity: .7;
+   }
+}
+
+.fourth {
+   &__heading {
+      color: var( --White);
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+      font-weight: 600;
+
+   }
+
+   &__paragraph {
+      font-size: .78rem;
+      color: var(--White);
+      opacity: .7;
+     
+   }
+}
+
+
+
+// GRADUATES' NAMES AND STATUS
+// GRADUATES' NAMES AND STATUS
+// GRADUATES' NAMES AND STATUS
+// GRADUATES' NAMES AND STATUS
+.first__graduate, .second__graduate {
+   color: var(--Light-Gray);
+
+   &--name {
+      font-size: .8rem;
+      font-weight: 500;
+      @media (min-width: 56.25em){
+         font-size: .9rem;
+      }
+      
+   }
+
+   &--status {
+      font-size: .7rem;
+      opacity: .5;
+
+      @media (min-width: 56.25em){
+         font-size: .8rem;
+      }
+   }
+}
+
+.third__graduate, .fifth__graduate {
+   color: var(--Very-Dark-Grayish-Blue);
+
+   &--name {
+      font-size: .8rem;
+      font-weight: 500;
+
+      @media (min-width: 56.25em){
+         font-size: .9rem;
+      }
+   }
+
+   &--status {
+      font-size: .7rem;
+      opacity: .5;
+
+      @media (min-width: 56.25em){
+         font-size: .8rem;
+      }
+   }
+}
+
+.fourth__graduate {
+   color: var(--White);
+
+   &--name {
+      font-size: .8rem;
+      font-weight: 500;
+
+      @media (min-width: 56.25em){
+         font-size: .9rem;
+      }
+   }
+
+   &--status {
+      font-size: .7rem;
+      opacity: .5;
+
+      @media (min-width: 56.25em){
+         font-size: .8rem;
+      }
+   }
+}
+
+
+

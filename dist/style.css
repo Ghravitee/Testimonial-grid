@@ -1,0 +1,290 @@
+:root {
+  --Moderate-Violet: hsl(263, 55%, 52%);
+  --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+  --Very-Dark-Blackish-Blue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+  --Light-Gray: hsl(0, 0%, 81%);
+  --Light-Grayish-Blue: hsl(210, 46%, 95%);
+  --ff-primary: "Barlow Semi Condensed", sans-serif;
+  --spacer: 1.5rem;
+  --br: .5rem;
+}
+
+/* For box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Removes default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* List elements */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+ol {
+  padding-left: 0;
+}
+
+/*  root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Default styles for elements that do not have a class*/
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Global styling for images*/
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+ul {
+  padding-left: 0;
+}
+
+body {
+  background-color: var(--Light-Grayish-Blue);
+  font-family: var(--ff-primary);
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+}
+
+.first {
+  background-color: var(--Moderate-Violet);
+  background-image: url(../images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: top right 10%;
+  padding: 0.5rem 1.7rem 1rem;
+  border-radius: var(--br);
+  grid-area: first;
+}
+@media (min-width: 50em) {
+  .first {
+    background-position: top right 5%;
+  }
+}
+
+.second {
+  background-color: var(--Very-Dark-Grayish-Blue);
+  border-radius: var(--br);
+  padding: 0.5rem 2rem 1rem;
+  grid-area: second;
+}
+.third {
+  background-color: var(--White);
+  border-radius: var(--br);
+  padding: 0.5rem 2.5rem 1rem 2rem;
+  grid-area: third;
+}
+.fourth {
+  background-color: var(--Very-Dark-Blackish-Blue);
+  border-radius: var(--br);
+  padding: 0.5rem 2.5rem 1rem 2.2rem;
+  grid-area: fourth;
+}
+.fifth {
+  background-color: var(--White);
+  border-radius: var(--br);
+  padding: 0.5rem 2.5rem 1rem 2.2rem;
+  grid-area: fifth;
+}
+.container {
+  max-width: 70rem;
+  padding: 3em 1.5em;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-areas: "first" "second" "third" "fourth" "fifth";
+  grid-auto-columns: 1fr;
+}
+@media (min-width: 30em) {
+  .grid {
+    max-width: 30rem;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 32em) {
+  .grid {
+    max-width: none;
+    grid-template-areas: "first first" "second fifth" "third fifth" "fourth fourth";
+  }
+}
+@media (min-width: 56.25em) {
+  .grid {
+    max-width: none;
+    grid-template-areas: "first first second fifth" "third fourth fourth fifth";
+  }
+}
+
+.graduate {
+  border: 2px solid var(--Light-Gray);
+  border-radius: 50%;
+  height: 2.5rem;
+  width: 2.5rem;
+  margin-right: 1rem;
+}
+
+.first__heading, .second__heading {
+  color: var(--White);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  font-weight: 600;
+}
+.first__paragraph, .second__paragraph {
+  font-size: 0.78rem;
+  color: var(--Light-Gray);
+  opacity: 0.7;
+}
+
+.third__heading, .fifth__heading {
+  color: var(--Very-Dark-Grayish-Blue);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  font-weight: 600;
+}
+.third__paragraph, .fifth__paragraph {
+  font-size: 0.78rem;
+  color: var(--Very-Dark-Grayish-Blue);
+  opacity: 0.7;
+}
+
+.fourth__heading {
+  color: var(--White);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  font-weight: 600;
+}
+.fourth__paragraph {
+  font-size: 0.78rem;
+  color: var(--White);
+  opacity: 0.7;
+}
+
+.first__graduate, .second__graduate {
+  color: var(--Light-Gray);
+}
+.first__graduate--name, .second__graduate--name {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+@media (min-width: 56.25em) {
+  .first__graduate--name, .second__graduate--name {
+    font-size: 0.9rem;
+  }
+}
+.first__graduate--status, .second__graduate--status {
+  font-size: 0.7rem;
+  opacity: 0.5;
+}
+@media (min-width: 56.25em) {
+  .first__graduate--status, .second__graduate--status {
+    font-size: 0.8rem;
+  }
+}
+
+.third__graduate, .fifth__graduate {
+  color: var(--Very-Dark-Grayish-Blue);
+}
+.third__graduate--name, .fifth__graduate--name {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+@media (min-width: 56.25em) {
+  .third__graduate--name, .fifth__graduate--name {
+    font-size: 0.9rem;
+  }
+}
+.third__graduate--status, .fifth__graduate--status {
+  font-size: 0.7rem;
+  opacity: 0.5;
+}
+@media (min-width: 56.25em) {
+  .third__graduate--status, .fifth__graduate--status {
+    font-size: 0.8rem;
+  }
+}
+
+.fourth__graduate {
+  color: var(--White);
+}
+.fourth__graduate--name {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+@media (min-width: 56.25em) {
+  .fourth__graduate--name {
+    font-size: 0.9rem;
+  }
+}
+.fourth__graduate--status {
+  font-size: 0.7rem;
+  opacity: 0.5;
+}
+@media (min-width: 56.25em) {
+  .fourth__graduate--status {
+    font-size: 0.8rem;
+  }
+}/*# sourceMappingURL=style.css.map */
